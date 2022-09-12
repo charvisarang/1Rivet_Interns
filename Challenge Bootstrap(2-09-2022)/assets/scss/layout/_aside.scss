@@ -1,0 +1,49 @@
+.sidebar {
+    max-width: 180px;
+    flex: 0 0 180px;
+    background-color: #ffffff;
+   
+
+    .logo {
+        height: 80px;
+        cursor: pointer;
+        font-size: 30px;
+
+        .logo:hover {
+            color: rgb(100, 228, 174);
+        }
+
+        &-text {
+            font-size: 30px;
+            color: $secondary;
+        }
+
+    }
+
+
+
+
+
+
+
+.nav {
+    .nav-item {
+        .nav-link {
+             color: $secondary;
+             font-size: 15px;
+            cursor: pointer;
+
+            &.active{
+                background-color:#f6fafc;
+                color: #6dc2b9;
+            }
+        }
+
+            .nav-link:hover {
+                background-color: #f6fafc;
+                color: #6dc2b9;
+            
+        }
+    }
+}
+}

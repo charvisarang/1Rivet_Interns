@@ -1,0 +1,56 @@
+.header{
+    height: 80px;
+    background-color: #ffffff;
+    
+}
+
+#toggle{
+     display: none;
+}
+#toggle:checked + .form-control{
+    width: 250px;
+    transform: translateX(+50px);
+    transition: 2s;
+}
+.text{
+    background-color: aqua;
+    border: 5px solid green;
+}
+
+.header-icon{
+    color: $secondary;
+    font-size: 20px;
+    cursor: pointer;
+}
+.header-icon:hover{
+    color:green;
+}
+
+input{
+    all: unset;
+}
+// .icon{
+//     cursor: pointer;
+//     font-size: 18px;
+//     color: $secondary;  
+   
+// }
+
+// .icon:hover{
+//     color: green;
+// }
+
+
+
+.image{
+    width: 40px;
+    height: 40px;
+    max-width: 100%;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: red;
+}
+img{
+    height: auto;
+    max-width: 100%;
+}
