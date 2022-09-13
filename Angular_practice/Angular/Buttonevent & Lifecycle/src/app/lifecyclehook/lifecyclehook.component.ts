@@ -1,4 +1,4 @@
-import { Component ,Input,OnInit,SimpleChange,DoCheck} from '@angular/core';
+import { Component ,Input,OnInit,SimpleChange,DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked,OnDestroy} from '@angular/core';
 
 @Component({
   selector: 'app-lifecyclehook',
@@ -6,7 +6,7 @@ import { Component ,Input,OnInit,SimpleChange,DoCheck} from '@angular/core';
   styleUrls: ['./lifecyclehook.component.scss']
 })
 export class LifecyclehookComponent implements OnInit {
-@Input() value:string="cjdcjsj";
+@Input() value:string="";
   
 constructor() {
     console.log('Constructor Called');
@@ -24,5 +24,20 @@ ngOnChanges(change:SimpleChange){
   ngDoCheck(){
 console.log('docheck called');
   }
-
+  ngAfterContentInit(){
+    console.log('after content init');
+  }
+ ngAfterContentChecked(){
+   console.log('after content checked');
 }
+ngAfterViewInit(){
+  console.log('content view init');
+}
+ngAfterViewChecked(){
+  console.log('after view checked');
+}
+ngDestroy():void{
+  console.log('destroy called');
+}
+}
+

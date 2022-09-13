@@ -7,11 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'buttonevent';
-  
+  destroy:boolean=true;
 
    inputText:string="";
   onSubmit(inputele:HTMLInputElement)
   {
     this.inputText=inputele.value;
+  }
+  destroyfunction(){
+    this.destroy=false;
   }
 }
