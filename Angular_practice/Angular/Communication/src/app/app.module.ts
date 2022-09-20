@@ -7,6 +7,10 @@ import { ChildComponent } from './child/child.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { PropertybindingComponent } from './propertybinding/propertybinding.component';
 import { StylebindingComponent } from './stylebinding/stylebinding.component';
+import { NgifComponent } from './ngif/ngif.component';
+import { NgforComponent } from './ngfor/ngfor.component';
+import { NgswitchComponent } from './ngswitch/ngswitch.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +18,15 @@ import { StylebindingComponent } from './stylebinding/stylebinding.component';
     ChildComponent,
     InterpolationComponent,
     PropertybindingComponent,
-    StylebindingComponent
+    StylebindingComponent,
+    NgifComponent,
+    NgforComponent,
+    NgswitchComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

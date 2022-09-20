@@ -6,12 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./buttons.component.scss']
 })
 export class ButtonsComponent implements OnInit {
-public word:string;
+public word:string="1Rivet";
 public number:number=100;
 
 constructor() { 
-this.word="1Rivet";
-//this.number=100;
   }
 
   ngOnInit(): void {

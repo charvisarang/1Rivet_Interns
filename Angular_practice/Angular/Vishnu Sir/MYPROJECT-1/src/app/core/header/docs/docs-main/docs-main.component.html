@@ -1,0 +1,30 @@
+<p>docs-main works!</p>
+<div class="container-fluid align-items-center jusitify-content-center">
+<div class="container bg-light">
+    <div class="d-flex align-items-center jusitify-content-center">
+        <label>Search:</label>
+        <input type="text" class="form-control w-25" placeholder="Username" [(ngModel)]="namesearch">
+        <button type="button" class="btn btn-outline-primary" routerLink="/adduser">Add Users</button>
+    <!-- <button><a routerLink="/login">Login Now</a></button> -->
+    </div>
+    
+<table class="table cell-spacing ">
+    <tr>
+        <th>RollNO</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Class</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let items of students">
+        <td>{{items.rollno}}</td>
+        <td>{{items.name}}</td>
+        <td>{{items.city}}</td>
+        <td>{{items.class}}</td>
+        <td>
+            <button routerLink="/edit_page">Edit</button>
+        </td>
+    </tr>
+</table>
+</div>
+</div>

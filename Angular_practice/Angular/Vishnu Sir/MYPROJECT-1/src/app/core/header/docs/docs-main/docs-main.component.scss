@@ -1,0 +1,19 @@
+
+table ,th,td {
+    border: 2px solid grey;
+    text-align: center;
+}
+th{
+    background-color: azure;
+    padding: 8px;
+}
+.container{
+margin-top: 50px;
+}
+.container-fluid{
+    border: 1px solid gray;
+}
+.btn{
+    margin: 20px;
+    float: right;
+}

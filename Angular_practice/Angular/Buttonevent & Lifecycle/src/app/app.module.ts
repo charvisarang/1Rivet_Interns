@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

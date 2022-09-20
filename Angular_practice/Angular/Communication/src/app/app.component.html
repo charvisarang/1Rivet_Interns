@@ -5,8 +5,12 @@
      <ul>
         <li *ngFor="let items of childcolor">{{items}}</li>
     </ul>
+
     <!-- <app-child></app-child> -->
     <app-child [childcolor]="parentcolor"(newchildcolor)="addColor($event)"></app-child>
 </div>
 <app-stylebinding></app-stylebinding>
 <app-interpolation></app-interpolation>
+ <app-ngif></app-ngif>
+ <!-- <app-ngfor></app-ngfor> -------------------------------baki che -->
+ <app-ngswitch></app-ngswitch>

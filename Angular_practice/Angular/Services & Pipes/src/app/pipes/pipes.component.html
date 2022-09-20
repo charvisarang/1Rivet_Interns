@@ -1,10 +1,14 @@
-<p>Pipes Works!</p>
-<h3>{{firstname}}</h3>
 <div class="N">
+    <h1>Pipes Works!</h1>
+    <h3>{{firstname}}</h3>
     <h1>{{lastname | uppercase}}</h1>
     <h1>{{person | json}}</h1>
     <h2>{{firstname | titlecase}}</h2>
     <h3>{{person.mname | uppercase}}</h3>
-    <h4>{{person.mname | slice:2:4}}</h4>
-    </div>
-    
+    <h4>{{person.mname | slice:1:4}}</h4>
+    <h4>Date: {{dateToday}}<br>
+        Date In Uppercase: {{dateToday | uppercase}}<br>
+        {{dateToday | date |uppercase}}<br>
+        Date With In Time: {{dateToday | date:'short' |uppercase}}
+    </h4>
+</div>

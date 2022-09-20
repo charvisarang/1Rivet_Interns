@@ -12,9 +12,11 @@ public person={
   "mname":"manthan",
   "cname":"charvi"
 }
-  constructor() { }
-
+ dateToday:string;
+  constructor() {
+    this.dateToday="";
+   }
   ngOnInit(): void {
+    this.dateToday=new Date().toDateString();
   }
-
 }
