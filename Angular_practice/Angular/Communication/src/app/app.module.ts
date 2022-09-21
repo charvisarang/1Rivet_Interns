@@ -10,7 +10,10 @@ import { StylebindingComponent } from './stylebinding/stylebinding.component';
 import { NgifComponent } from './ngif/ngif.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CoreModule } from './core/core.module';
+import { EmployeeModule } from './employee/employee.module';
+import { HeaderComponent } from './core/header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +26,13 @@ import { FormsModule } from '@angular/forms';
     NgforComponent,
     NgswitchComponent,
     
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule
+    AppRoutingModule,FormsModule,CoreModule,
+    EmployeeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

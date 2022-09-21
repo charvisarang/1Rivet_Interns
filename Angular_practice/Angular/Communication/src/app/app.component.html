@@ -1,16 +1,17 @@
 
-
-<div class="parent">
+<app-header></app-header>
+<router-outlet></router-outlet>
+<!-- <div class="parent">
     
      <ul>
         <li *ngFor="let items of childcolor">{{items}}</li>
-    </ul>
+    </ul> -->
 
     <!-- <app-child></app-child> -->
-    <app-child [childcolor]="parentcolor"(newchildcolor)="addColor($event)"></app-child>
-</div>
-<app-stylebinding></app-stylebinding>
+    <!-- <app-child [childcolor]="parentcolor"(newchildcolor)="addColor($event)"></app-child> -->
+<!-- </div> -->
+<!-- <app-stylebinding></app-stylebinding>
 <app-interpolation></app-interpolation>
- <app-ngif></app-ngif>
+ <app-ngif></app-ngif> -->
  <!-- <app-ngfor></app-ngfor> -------------------------------baki che -->
- <app-ngswitch></app-ngswitch>
+ <!-- <app-ngswitch></app-ngswitch> -->

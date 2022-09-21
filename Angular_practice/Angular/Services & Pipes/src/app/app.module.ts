@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmplistComponent } from './emplist/emplist.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { CurrencyPipe } from './pipes/pipes/currency.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmplistComponent,
-    PipesComponent
+    PipesComponent,
+    CurrencyPipe
   ],
   imports: [
     BrowserModule,
