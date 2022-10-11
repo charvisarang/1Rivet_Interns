@@ -6,6 +6,9 @@ import { EmployeeComponent } from './employee.component';
 import { EmpformComponent } from './empform/empform.component';
 import { EmplistComponent } from './emplist/emplist.component';
 import { EmpdetailsComponent } from './empdetails/empdetails.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CustompipesPipe } from '../custompipes.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,11 +20,16 @@ import { EmpdetailsComponent } from './empdetails/empdetails.component';
   ],
   imports: [
     CommonModule,
-    EmployeeRoutingModule
+    EmployeeRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    
   ],
   exports:[
-    EmpdetailsComponent,
-    EmpformComponent,EmplistComponent
+    EmpformComponent,
+    EmplistComponent,
+    EmpdetailsComponent
   ]
 })
 export class EmployeeModule { }

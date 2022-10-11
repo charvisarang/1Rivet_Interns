@@ -1,0 +1,46 @@
+<div class="container w-50  my-5">
+    <h3>Simple Form</h3>
+    <form [formGroup]="mainform" class="m-5">
+        <div class="mb-3">
+            <label class="form-label">Enter Name :</label>
+            <input type="text" class="form-control" placeholder="enter here" class="form-label" formControlName="name">
+            <div
+                *ngIf="mainform.controls['name'].invalid && (isSubmitted || mainform.controls['name'].touched || mainform.controls['name'].dirty)">
+                <p style="color: red;" *ngIf="mainform.controls['name'].errors?.['required']">Name is required</p>
+                <p  style="color: red;" *ngIf="mainform.controls['name'].errors?.['minlength']">Maximum needs 3 characters</p>
+                <p  style="color: red;" *ngIf="mainform.controls['name'].errors?.['pattern']">Only fill characters</p>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Enter Gender :</label>
+            <input type="text" class="form-control" placeholder="enter here" class="form-label"
+                formControlName="gender">
+            <div
+                *ngIf="mainform.controls['gender'].invalid && (isSubmitted || mainform.controls['gender'].touched || mainform.controls['gender'].dirty)">
+                <p  style="color: red;" *ngIf="mainform.controls['gender'].errors?.['required']">Gender is required</p>
+                <p  style="color: red;" *ngIf="mainform.controls['gender'].errors?.['minlength']">Maximum needs 3 characters</p>
+                <p  style="color: red;" *ngIf="mainform.controls['gender'].errors?.['pattern']">Only fill characters</p>
+            </div>
+        </div>
+        <!-- Salary -->
+        <div class="mb-3">
+            <label class="form-label">Enter Salary :</label>
+            <input type="text" class="form-control" placeholder="enter here" class="form-label"
+                formControlName="salary">
+            <div
+                *ngIf="mainform.controls['salary'].invalid && (isSubmitted || mainform.controls['salary'].touched || mainform.controls['salary'].dirty)">
+                <p  style="color: red;" *ngIf="mainform.controls['salary'].errors?.['required']">Salary is required</p>
+                <!-- <p  style="color: red;" *ngIf="mainform.controls['salary'].errors?.['minlength']">Maximum needs 3 characters</p> -->
+                <p  style="color: red;" *ngIf="mainform.controls['salary'].errors?.['pattern']">Only fill numbers</p>
+            </div>
+        </div>
+
+        <br>
+
+        <button type="button" class="btn btn-primary me-3" (click)="onSubmit()">Submit</button>
+        <button type="button" class="btn btn-info ms-3" (click)="onReset()">Reset</button>
+
+    </form>
+</div>
+<app-childlist [table]="form" ></app-childlist>
+<!-- <app-childlist [table]="form" (newchanges)='onEdit($event)'></app-childlist> -->

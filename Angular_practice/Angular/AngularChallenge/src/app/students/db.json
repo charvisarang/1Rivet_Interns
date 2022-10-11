@@ -1,0 +1,31 @@
+{
+  "student": [
+    {
+      "firstname": "sxsx",
+      "lastname": "xss",
+      "email": "charvisarang14may@gmail.com",
+      "password": "fghh",
+      "dob": "2022-10-21",
+      "salary": "6765",
+      "id": 2
+    },
+    {
+      "firstname": "sxsx",
+      "lastname": "xssdnbrhgfygtftwgs",
+      "email": "charvisarang14may@gmail.com",
+      "password": "fghh",
+      "dob": "2022-10-21",
+      "salary": "6765",
+      "id": 3
+    },
+    {
+      "firstname": "sxsx",
+      "lastname": "xssdnbrhgfygtftwgs",
+      "email": "charvisarang14may@gmail.com",
+      "password": "fghh",
+      "dob": "2022-10-21",
+      "salary": "6765",
+      "id": 4
+    }
+  ]
+}

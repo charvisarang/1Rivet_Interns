@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let items of table">
+            <td>{{items.name}}</td>
+            <td>{{items.gender}}</td>
+            <td>{{items.salary}}</td>
+            <td>
+                <div class="d-flex justify-content-around text-align-center">
+                    <div> <i class="fa-solid fa-trash-can text-danger" style="font-size: 20px;"(click)="onDelete(items.id)"></i></div>
+                    <div><i class="fa-regular fa-pen-to-square text-info" style="font-size: 20px;"(click)="onEdit(items)"></i></div>
+                    <Button type="button" class="btn bg-success text-white" routerLink="childdetails">Details</Button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

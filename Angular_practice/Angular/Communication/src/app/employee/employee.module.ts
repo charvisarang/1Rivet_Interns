@@ -7,6 +7,7 @@ import { ChildformComponent } from './childform/childform.component';
 import { ParenttableComponent } from './parenttable/parenttable.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
   imports: [
     CommonModule,
     EmployeeRoutingModule,
+    AppRoutingModule,
     ReactiveFormsModule
   ],
   exports:[

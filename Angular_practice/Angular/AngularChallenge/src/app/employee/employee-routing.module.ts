@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EmpdetailsComponent } from './empdetails/empdetails.component';
 import { EmpformComponent } from './empform/empform.component';
@@ -9,24 +9,30 @@ const routes: Routes = [
   {
     path: '',
     component: EmployeeComponent,
-  },
-  {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'empform'
-  },
-  {
-    path: 'empform',
-    component: EmpformComponent
-  },
-  {
-    path: 'emplist',
-    component: EmplistComponent
-  },
-  {
-    path: 'empdetails',
-    component: EmpdetailsComponent
-  },
+    children: [
+      {
+        path: '',
+        redirectTo: 'empform',
+        pathMatch: 'full'
+      },
+      {
+        path: 'empform',
+        component: EmpformComponent
+      },
+      // {
+      //   path:'emplist',
+      //   component:EmplistComponent
+      // },
+      {
+        path: 'edit/:id',
+        component: EmpformComponent
+      },
+      {
+        path: 'empdetails',
+        component: EmpdetailsComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({

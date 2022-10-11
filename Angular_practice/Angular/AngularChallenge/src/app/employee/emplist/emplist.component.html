@@ -1,1 +1,23 @@
-<p>emplist works!</p>
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>Sr.No</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let items of table index as i">
+            <td>{{i+1}}</td>
+            <td>{{items.email}}</td>
+            <td>{{items.password}}</td>
+            <td>
+            <div class="d-flex justify-content-around">
+                <i style="color: red;" class="fa-regular fa-trash-can" (click)="onDelete(items.id)"></i>
+                <i style="color:blue;" class="fa-regular fa-pen-to-square" (click)="onEdit(items)"></i>
+                <button type="button" class="btn btn-info" (click)="onDetails(items)">Details</button>
+
+            </div>
+        </td>
+        </tr>
+    </table>
+</div>

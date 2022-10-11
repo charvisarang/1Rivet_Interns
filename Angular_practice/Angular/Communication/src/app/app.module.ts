@@ -14,6 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { EmployeeModule } from './employee/employee.module';
 import { HeaderComponent } from './core/header/header.component';
+import { EmployeeRoutingModule } from './employee/employee-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,17 @@ import { HeaderComponent } from './core/header/header.component';
     NgifComponent,
     NgforComponent,
     NgswitchComponent,
+    HomeComponent,
     
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,CoreModule,
+    AppRoutingModule,
+    FormsModule,CoreModule,
     EmployeeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

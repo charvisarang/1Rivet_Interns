@@ -7,20 +7,39 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { CoreModule } from './core/core.module';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { EmployeeRoutingModule } from './employee/employee-routing.module';
+import { EmployeeModule } from './employee/employee.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import {  HttpClientModule } from '@angular/common/http';
+import { CustompipesPipe } from './custompipes.pipe';
+import { CrudserviceService } from './crudpractice/service/crudservice.service';
+import { EmpserviceService } from './employee/service/empservice.service';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ContactComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    CustompipesPipe,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    EmployeeModule,
+    EmployeeRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+   
   ],
-  providers: [],
+  providers: [CrudserviceService, EmpserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

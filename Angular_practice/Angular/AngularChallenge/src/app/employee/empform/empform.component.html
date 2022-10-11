@@ -1,1 +1,35 @@
-<p>empform works!</p>
+<h1 style="color:bisque;text-align: center;">Welcome To Employee Page</h1>
+
+
+<div class="container p-3">
+  <h2 style="text-align:center;" class="mb-3">Login Form</h2>
+
+  <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+    <div class="mb-3 row">
+      <label  class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control"  placeholder="enter here email" formControlName="email">
+      <div *ngIf="loginform.controls['email'].invalid && (isSubmitted || loginform.controls['email'].touched || loginform.controls['email'].dirty)">
+        <p style="color: red;" *ngIf="loginform.controls['email'].errors?.['required']">Email is required</p>
+        <p style="color: red;" *ngIf="loginform.controls['email'].errors?.['pattern']">Please fill proper input</p>
+      </div>
+      
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label  class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword" placeholder="enter here password" formControlName="password">
+        <div *ngIf="loginform.controls['password'].invalid && (isSubmitted || loginform.controls['password'].touched || loginform.controls['password'].dirty)">
+          <p style="color: red;" *ngIf="loginform.controls['password'].errors?.['required']">Password is required</p>
+          <p style="color: red;" *ngIf="loginform.controls['password'].errors?.['minlength']">Maximum need 8 characters</p>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<div class="container2">
+  <app-emplist [table]="form" (newchanges)="onEdit($event)"></app-emplist>
+</div>

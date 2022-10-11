@@ -1,0 +1,96 @@
+<div class="container">
+    <h3 style="text-align:center ;">Student Form</h3>
+    <form [formGroup]="mainform" class="form" (ngSubmit)="onSubmit()">
+        <!-- First Name -->
+        <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control" placeholder="enter here" formControlName="firstname">
+            <div *ngIf="mainform.controls['firstname'].invalid &&
+           (isSubmitted || mainform.controls['firstname'].touched || mainform.controls['firstname'].dirty)">
+                <p style="color: red;" *ngIf="mainform.controls['firstname'].errors?.['required']">First name is
+                    required</p>
+                <p style="color: red;" *ngIf="mainform.controls['firstname'].errors?.['minlength']">Maximum 3 characters
+                </p>
+                <p style="color: red;" *ngIf="mainform.controls['firstname'].errors?.['pattern']">Only Alphabets</p>
+            </div>
+        </div>
+        <!-- Last Name -->
+        <div class="mb-3">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control" placeholder="enter here" formControlName="lastname">
+            <div *ngIf="mainform.controls['lastname'].invalid &&
+             (isSubmitted ||  mainform.controls['lastname'].touched || mainform.controls['lastname'].dirty)">
+                <p style="color: red;" *ngIf="mainform.controls['lastname'].errors?.['required']">Last name is required
+                </p>
+                <p style="color: red;" *ngIf="mainform.controls['lastname'].errors?.['minlength']">Maximum 3 characters
+                </p>
+                <p style="color: red;" *ngIf="mainform.controls['lastname'].errors?.['pattern']">Only Alphabets</p>
+            </div>
+        </div>
+        <!-- Email -->
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="enter here" formControlName="email">
+            <div *ngIf="mainform.controls['email'].invalid &&
+                 (isSubmitted ||  mainform.controls['email'].touched || mainform.controls['email'].dirty)">
+                <p style="color: red;" *ngIf="mainform.controls['email'].errors?.['required']">Email is required</p>
+                <p style="color: red;" *ngIf="mainform.controls['email'].errors?.['pattern']">Please Fill Proper Email
+                </p>
+            </div>
+        </div>
+        <!-- Password -->
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" placeholder="enter here" formControlName="password">
+            <div *ngIf="mainform.controls['password'].invalid &&
+                     (isSubmitted ||  mainform.controls['password'].touched || mainform.controls['password'].dirty)">
+                <p style="color: red;" *ngIf="mainform.controls['password'].errors?.['required']">Password is required
+                </p>
+            </div>
+        </div>
+        <!-- Date Of Birth -->
+        <div class="mb-3">
+            <label class="form-label">Date of birth</label>
+            <input type="date" class="form-control" placeholder="enter here" formControlName="dob">
+            <div *ngIf="mainform.controls['dob'].invalid &&
+                 (isSubmitted ||  mainform.controls['dob'].touched || mainform.controls['dob'].dirty)">
+                <p style="color: red;" *ngIf="mainform.controls['dob'].errors?.['required']">Date of birth is required
+                </p>
+            </div>
+        </div>
+        <!-- Salary -->
+        <div class="mb-3">
+            <label class="form-label">Salary</label>
+            <input type="text" class="form-control" placeholder="enter here" formControlName="salary">
+            <div
+                *ngIf="mainform.controls['salary'].invalid  && (isSubmitted || mainform.controls['salary'].touched || mainform.controls['salary'].dirty)">
+                <p style="color: red;" *ngIf="mainform.controls['salary'].errors?.['required']">Salary is required</p>
+                <p style="color: red;" *ngIf="mainform.controls['salary'].errors?.['pattern']">Please fill only numbers
+                </p>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Success</button>
+
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="onSubmit()">
+    Submit
+  </button> -->
+  
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content  bg-danger">
+        <div class="modal-header">
+         <h6 style="color:white;">Please Fill All The Records</h6>
+          <button type="button" class=" btn btn-close"  data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+      </div>
+    </div>
+  </div> -->
+
+
+    </form>
+</div>
+<app-studlist [table]="form" (newchanges)='onEdit($event)'></app-studlist>
